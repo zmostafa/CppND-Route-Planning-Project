@@ -20,6 +20,8 @@ script:
   - sudo rm /usr/bin/g++
   - sudo ln -s /usr/bin/g++-7 /usr/bin/g++
   - g++ --version
-  - mkdir -p build
+  - cd .. && git clone --recurse-submodules https://github.com/cpp-io2d/P0267_RefImpl
+  - mkdir Debug && cd Debug && cmake --config Debug "-DCMAKE_BUILD_TYPE=Debug" .. && cmake --build . && make && sudo make install
+  - cd CppND-Route-Planning-Project && mkdir -p build
   - cd build
   - cmake ..
