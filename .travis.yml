@@ -1,0 +1,22 @@
+language: cpp
+dist: xenial
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - llvm-toolchain-trusty-5.0
+    packages:
+      - graphviz
+      - build-essential
+      - libcairo2-dev
+      - libgraphicsmagick1-dev
+      - libpng-devl
+      - g++-7
+    env:
+      - MATRIX_EVAL="CC=clang-7.0 && CXX=clang++-7.0"
+
+script:
+  - mkdir -p build
+  - cd build
+  - cmake ..
