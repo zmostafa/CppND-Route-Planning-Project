@@ -12,7 +12,7 @@ addons:
       - libcairo2-dev
       - libgraphicsmagick1-dev
       - libpng-devl
-      - g++-7
+      #- g++-7
     env:
       - MATRIX_EVAL="CC=clang-7.0 && CXX=clang++-7.0"
 
