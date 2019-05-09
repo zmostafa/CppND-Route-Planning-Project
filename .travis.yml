@@ -11,12 +11,15 @@ addons:
       - build-essential
       - libcairo2-dev
       - libgraphicsmagick1-dev
-      - libpng-devl
-      #- g++-7
+      - libpng-dev
+      - g++-7
     env:
       - MATRIX_EVAL="CC=clang-7.0 && CXX=clang++-7.0"
 
 script:
+  - sudo rm /usr/bin/g++
+  - sudo ln -s /usr/bin/g++-7 /usr/bin/g++
+  - g++ --version
   - mkdir -p build
   - cd build
   - cmake ..
