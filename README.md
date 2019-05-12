@@ -35,16 +35,15 @@ The executables will be placed in the `bin` directory. From within `build`, you 
 
 For exercises that have unit tests, the project must be built with the approprate test cpp file. This can be done by passing a string with the `-DTESTING` flag in `cmake`. For example, from the build directory:
 ```
-cmake -DTESTING="RouteModel" ..
+cmake -DTESTING="EnableTesting" ..
 make
 ```
-Those commands will build the code with the tests for the "Fill Out Route Model" exercise. The tests can then be run from the `build` directory as follows:
+Those commands will build the code with the tests for all exercisse. The tests can then be run from the `build` directory as follows:
 ```
-../bin/test
+../bin/<test_name>
 ```
-Exercises with tests will specify which string to pass with `-DTESTING`, but a table is given below with the complete list for reference:
 
-| Exercise Name               | `-DTESTING` String Value |
+| Exercise Name               |       Test Name          |
 |-----------------------------|:------------------------:|
 | Fill Out Route Model        |       "RouteModel"       |
 | Fill Out Node Class         |       "RMNodeClass"      |
