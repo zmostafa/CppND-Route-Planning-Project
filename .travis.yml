@@ -24,4 +24,15 @@ script:
   - cd P0267_RefImpl && mkdir Debug && cd Debug && cmake --config Debug "-DCMAKE_BUILD_TYPE=Debug" .. && cmake --build . && make && sudo make install
   - cd ../../CppND-Route-Planning-Project && mkdir -p build
   - cd build
-  - cmake ..
+  - cmake -DTESTING="EnableTesting" ..
+  - make 
+  - ../bin/NodeDist
+  - ../bin/NodeToRoad
+  - ../bin/RMNodeClass
+  - ../bin/RMSNodes
+  - ../bin/RouteModel
+#  - ../bin/FindNeighbors
+#  - ../bin/FindClosest
+#  - ../bin/AStarStub
+#  - ../bin/AStarSearch
+  
