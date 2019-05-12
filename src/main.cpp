@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <io2d.h>
+#include<iomanip>
 #include "route_model.h"
 #include "render.h"
 #include "route_planner.h"
@@ -59,6 +60,10 @@ int main(int argc, const char **argv)
 
     // Perform search and render results.
     RoutePlanner route_planner{model, 10, 10, 90, 90};
+    // Call A* search on route_planner 
+    route_planner.AStarSearch();
+    // Print length of the Path
+    std::cout << "Length of path found by A* search : " << route_planner.GetDistance() << std::endl;
     Render render{model};
 
     auto display = io2d::output_surface{400, 400, io2d::format::argb32, io2d::scaling::none, io2d::refresh_style::fixed, 30};
