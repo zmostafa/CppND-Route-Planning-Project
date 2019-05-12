@@ -32,7 +32,7 @@ script:
   - ../bin/RMSNodes
   - ../bin/RouteModel
   - ../bin/FindNeighbors
-#  - ../bin/FindClosest
-#  - ../bin/AStarStub
+  - ../bin/FindClosest
+  - ../bin/AStarStub
 #  - ../bin/AStarSearch
   
