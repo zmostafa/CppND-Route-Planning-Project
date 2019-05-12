@@ -34,5 +34,5 @@ script:
   - ../bin/FindNeighbors
   - ../bin/FindClosest
   - ../bin/AStarStub
-#  - ../bin/AStarSearch
+  - ../bin/AStarSearch
   
