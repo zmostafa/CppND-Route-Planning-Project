@@ -21,17 +21,19 @@ class RouteModel : public Model {
         Node(){}
         Node(int idx, RouteModel * search_model, Model::Node node) : Model::Node(node), parent_model(search_model), index(idx) {}
         float distance (Node node) const { return sqrt( std::pow((x - node.x) ,2) + std::pow((y - node.y),2) ); } //  Return the euclidean distance from the current node to the node passed in.
-      
+        void FindNeighbors();
+
       private:
         // Add private Node variables and methods here.
         int index;
+        RouteModel::Node* FindNeighbor(std::vector<int> node_indices);
         RouteModel * parent_model = nullptr;
     };
     
     // Add public RouteModel variables and methods here.
     RouteModel(const std::vector<std::byte> &xml);  
     std::vector<Node> path; // This variable will eventually store the path that is found by the A* search.
-    auto &SNodes () const { return m_Nodes;}
+    auto &SNodes () { return m_Nodes;}
     auto &GetNodeToRoadMap () const { return node_to_road;}
 
   private:
