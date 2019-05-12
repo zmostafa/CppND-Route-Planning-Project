@@ -33,6 +33,6 @@ script:
   - ../bin/RouteModel
   - ../bin/FindNeighbors
   - ../bin/FindClosest
-  - ../bin/AStarStub
+  # - ../bin/AStarStub
   - ../bin/AStarSearch
   

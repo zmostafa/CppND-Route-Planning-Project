@@ -59,6 +59,7 @@ int main(int argc, const char **argv)
     float end_x = 0.0;
     float end_y = 0.0;
 
+    std::cout << "The coordinate (0, 0) should roughly correspond with the lower left corner of the map, and (100, 100) with the upper right." << std::endl;
     std::cout << "Please, Enter `start_x`, `start_y`, `end_x`, and `end_y` : " << std::endl;
     std::cin >> start_x >> start_y >> end_x >> end_y ;
     
