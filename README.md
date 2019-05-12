@@ -1,4 +1,4 @@
-# Route Planning Project Starter Code
+# Route Planning Project Starter Code  [![Build Status](https://travis-ci.com/zmostafa/CppND-Route-Planning-Project.svg?branch=master)](https://travis-ci.com/zmostafa/CppND-Route-Planning-Project)
 
 This is the starter code for the Route Planning project. Instructions for each exercise can be found in the `instructions` directory, and unit tests for some exercises in the `test` directory.
 
